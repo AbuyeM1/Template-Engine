@@ -31,10 +31,7 @@ class Employee {
  function generateHtmlTeam(data, response) {
      return `<!doctype html>
      <html lang="en">
-     <head>
-     </head>
-     <body>
-     </body>
+     
      </html>`
 }
 module.exports = Employee
