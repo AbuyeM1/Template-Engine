@@ -3,7 +3,7 @@ const Employee = require("./Employee");
 
 class Manager extends Employee {
     constructor(name, id, email, github) {
-        super(name, id, email);
+        this (name, id, email);
         this.github = github;
         this.getOfficeNumber = officeNumber;
     }
