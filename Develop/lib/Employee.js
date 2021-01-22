@@ -1,37 +1,29 @@
 // TODO: Write code to define and export the Employee class
 class Employee {
-    constructor(name, role, email, id, officeNumber) {
+    constructor(name, id, email, title,) {
         this.name = name;
-        this.role = role;
         this.email = email;
         this.id = id;
-        this.title = officeNumber;
+        this.title = title;
+        
     }
     getName() {
         console.log(this.name);
         return this.name;
-    }
-    getRole() {
-        console.log(this.role);
-        return this.role;
+
     }
     getEmail() {
-        // console.log(this.email);
         return this.email;
     }
-    getId(){
-        console.log(this.id);
+    
+    getRole() {
+        
+        return "Employee";
+    }
+    getId() {
         return this.id;
     }
-    getOfficeNumber() {
-        console.log(this.officeNumber);
-        return this.officeNumber;
-    }
+    
 }
- function generateHtmlTeam(data, response) {
-     return `<!doctype html>
-     <html lang="en">
-     
-     </html>`
-}
+
 module.exports = Employee

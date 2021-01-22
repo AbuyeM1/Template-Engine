@@ -3,7 +3,7 @@ const Employee = require("./Employee");
 
 class Engineer extends Employee {
     constructor(name, id, email, github) {
-        this (name, id, email);
+        super (name, id, email);
         this.github = github;
 }
     getRole() {
@@ -14,10 +14,5 @@ class Engineer extends Employee {
     }
 
 }
-function generateHtmlTeam(data, response) {
-    return `<!doctype html>
-    <html lang "en">
-   
-   </html> `
-}
+
 module.exports = Engineer
