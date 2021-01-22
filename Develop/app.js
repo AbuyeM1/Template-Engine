@@ -39,7 +39,9 @@ function promptUser() {
         ]) .then(function(response) {
             console.log(response);
         })
-    }
+    } 
+
+
    promptManager()
 };
    promptUser()
