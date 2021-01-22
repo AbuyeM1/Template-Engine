@@ -10,6 +10,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { type } = require("os");
 
 function promptUser() {
     function promptManager() {
@@ -17,7 +18,7 @@ function promptUser() {
             {
             type: "input",
             name: "name",
-            message: "What is your name"
+            message: "What is your name?"
             },
             {
                 type: "input",
@@ -27,12 +28,12 @@ function promptUser() {
             {
                 type: "input",
                 name: "email",
-                message: "What is your email account"
+                message: "What is your email account?"
             },
             {
                 type: "input",
                 name: "officeNumber",
-                message: "What is your office number"
+                message: "What is your office number?"
             }
             
         ]) .then(function(response) {
@@ -42,8 +43,6 @@ function promptUser() {
    promptManager()
 };
    promptUser()
-    
-
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
