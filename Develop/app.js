@@ -18,68 +18,17 @@ let mainArr = [];
 const confirmManager = [{type: 'confirm', name: 'Manager',  message: 'Are you a manager?'
 }];
 const managersBio = [{   type: "input",   name: "managers_name",   message: "What is your name?" },
-    {
-        type: "input",
-        name: "managers_id",
-        message: "What is your id?"
+    {type: "input", name: "managers_id",message: "What is your id?"},
+    {type: "input", name: "managers_email",message: "What is your email?"
     },
-    {
-        type: "input",
-        name: "managers_email",
-        message: "What is your email?"
-    },
-    {
-        type: "input",
-        name: "managers_officeNumber",
-        message: "What is your office phone number?"
+    {type: "input", name: "managers_officeNumber", message: "What is your office phone number?"
     }
 ];
-const myManagersBio = [{
-        type: "input",
-        name: "my_managers_name",
-        message: "What is your manager's name?"
-    },
-    {
-        type: "input",
-        name: "my_managers_department",
-        message: "What is your manager's department?"
-    },
-    {
-        type: "input",
-        name: "my_managers_id",
-        message: "What is your manager's id?"
-    },
-    {
-        type: "input",
-        name: "my_managers_email",
-        message: "What is your manager's email?"
-    },
-    {
-        type: "input",
-        name: "my_managers_officeNumber",
-        message: "What is your manager's office phone number?"
-    }
-];
-const engineerQuestions = [{
-        type: "input",
-        name: "engineers_name",
-        message: "What is your engineer's name?"
-    },
-    {
-        type: "input",
-        name: "engineers_id",
-        message: "What is your engineer's id?"
-    },
-    {
-        type: "input",
-        name: "engineers_email",
-        message: "What is your engineer's email?"
-    },
-    {
-        type: "input",
-        name: "engineers_gitHub",
-        message: "What is your engineer's GitHub username?"
-    }
+
+const engineerQuestions = [{type: "input",name: "engineers_name",message: "What is your engineer's name?"},
+    {type: "input", name: "engineers_id", message: "What is your engineer's id?" },
+    {type: "input", name: "engineers_email", message: "What is your engineer's email?"},
+    { type: "input", name: "engineers_gitHub", message: "What is your engineer's GitHub username?" }
 ];
 const internQuestions = [{
         type: "input",
