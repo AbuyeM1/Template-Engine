@@ -11,52 +11,87 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 const { type } = require("os");
+ let mainArr = [];
+// function promptUser() {
+//     inquirer.prompt([ 
+//         {
+//         type: "input",
+//         name: "name",
+//         message: "What is your name?"
+//         }
+//     ])
+//     .then(function(response) {
 
-function promptUser() {
+//         console.log(response);
+//       if (response.name == "manager"){
+//         //   console.log("manager here");
+//           promptManager();
+//       }
+//     })
+
+
+// };
+promptManager(); 
     function promptManager() {
-         inquirer.prompt([ 
-            {
-            type: "input",
-            name: "name",
-            message: "What is your name?"
-            },
-            {
-                type: "input",
-                name: "id",
-                message: "Please enter a id"
-            },
-            {
-                type: "input",
-                name: "email",
-                message: "What is your email account?"
-            },
-            {
-                type: "input",
-                name: "officeNumber",
-                message: "What is your office number?"
-            },
-            {
-                type: "input",
-                name: "titel",
-                choices: ["Manager", "Engineer", "Intern"],
-            },
-            {
-                type: "input",
-                name: "username",
-                message: "What is your Github username?"
-            }
-            
-        ]) .then(function(response) {
-            console.log(response);
-           
-        })
-    } 
+        inquirer.prompt([ 
+           {
+           type: "input",
+           name: "name",
+           message: "What is your name?"
+           },
+           {
+               type: "input",
+               name: "id",
+               message: "Please enter a id"
+           },
+           {
+               type: "input",
+               name: "email",
+               message: "What is your email account?"
+           },
+           {
+               type: "input",
+               name: "officeNumber",
+               message: "What is your office number?"
+           },
+           {
+               type: "input",
+               name: "title",
+               choices: ["Manager", "Engineer", "Intern"],
+           },
+           {
+               type: "input",
+               name: "username",
+               message: "What is your Github username?"
+           }
 
+       ]) .then(function(response) {
+           console.log(response);
+             console.log("the user is a manger")
+             const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+             mainArr.push(manager)
+             console.log(mainArr)
+            const html =  render(mainArr);
+            console.log(html)
+        
+            fs.writeFile(outputPath, html, function(err, result){
+                if(err) console.log(err)
+            }); 
+       })
+       
+    }
 
-   promptManager()
-};
-   promptUser()
+   
+
     
+
+
+  
+
+
+
+
+
 
 
 // Write code to use inquirer to gather information about the development team members,
@@ -82,9 +117,18 @@ function promptUser() {
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
+// 
+//
 
 
 
 
-
+/*
+ first promt title 
+ swicht(title){
+     if(tiltie manager prompt manager
+        if title emginer prompt enginner 
+        if ti
+ }
+*/
 
