@@ -14,30 +14,37 @@ const { type } = require("os");
 
 let mainArr = [];
 
-// Questions
+// Questions for Manager
 const confirmManager = [{type: 'confirm', name: 'Manager',  message: 'Are you a manager?'
 }];
 const managersBio = [{   type: "input",   name: "managers_name",   message: "What is your name?" },
+
     {type: "input", name: "managers_id",message: "What is your id?"},
-    {type: "input", name: "managers_email",message: "What is your email?"
-    },
+
+    {type: "input", name: "managers_email",message: "What is your email?"},
+
     {type: "input", name: "managers_officeNumber", message: "What is your office phone number?"
     }
 ];
-
+// Questions for Engineer
 const engineerQuestions = [{type: "input",name: "engineers_name",message: "What is your engineer's name?"},
     {type: "input", name: "engineers_id", message: "What is your engineer's id?" },
+
     {type: "input", name: "engineers_email", message: "What is your engineer's email?"},
+
     { type: "input", name: "engineers_gitHub", message: "What is your engineer's GitHub username?" }
 ];
-
+// Questions for Intern
 const internQuestions = [{type: "input",name: "interns_name",message: "What is your intern's name?"},
+
     {type: "input",name: "interns_id", message: "What is your intern's id?"},
+
     {type: "input",name: "interns_email", message: "What is your intern's email?" },
+
     {type: "input",name: "interns_school", message: "What is your intern's school?"
     }
 ];
-
+// choices list for if wants add more members
 const list = [{
     type: "list",
     name: "teamMember_type",
@@ -47,12 +54,11 @@ const list = [{
 
 inquirer.prompt(confirmManager).then(ans => {
     if (ans.Manager === true) {
-        promptManager();
+    promptManager();
     } else {
-        promptMyManager();
+    promptMyManager();
     }
 });
-
 
 const promptNext = () => {
     inquirer.prompt(list).then(data => {
@@ -72,20 +78,11 @@ const promptNext = () => {
 
 const promptManager = () => {
     inquirer.prompt(managersBio).then(ans => {
-        console.log(ans);
-        mainArr.push(new Manager(ans.managers_name, ans.managers_id, ans.managers_email, ans.managers_officeNumber));
-        promptNext();
-    });
-};
-
-const promptMyManager = () => {
-    inquirer.prompt(myManagersBio).then(ans => {
     console.log(ans);
     mainArr.push(new Manager(ans.managers_name, ans.managers_id, ans.managers_email, ans.managers_officeNumber));
     promptNext();
     });
 };
-
 
 const promptEngineer = () => {
     inquirer.prompt(engineerQuestions).then(ans => {
@@ -113,73 +110,6 @@ const createHtml = () => {
         if(err) throw err;
     })
 };
-
-
-
-
-
-
-
-
-// promptManager(); 
-//     function promptManager() {
-//         inquirer.prompt([ 
-//            {
-//            type: "input",
-//            name: "name",
-//            message: "What is your name?"
-//            },
-//            {
-//                type: "input",
-//                name: "id",
-//                message: "Please enter a id"
-//            },
-//            {
-//                type: "input",
-//                name: "email",
-//                message: "What is your email account?"
-//            },
-//            {
-//                type: "input",
-//                name: "officeNumber",
-//                message: "What is your office number?"
-//            },
-//            {
-//                type: "input",
-//                name: "title",
-//                choices: ["Manager", "Engineer", "Intern"],
-//            },
-//            {
-//                type: "input",
-//                name: "username",
-//                message: "What is your Github username?"
-//            }
-
-//        ]) .then(function(response) {
-//            console.log(response);
-//              console.log("the user is a manger")
-//              const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
-//              mainArr.push(manager)
-//              console.log(mainArr)
-//             const html =  render(mainArr);
-//             console.log(html)
-
-//             fs.writeFile(outputPath, html, function(err, result){
-//                 if(err) console.log(err)
-//             }); 
-//        })
-
-//     }
-
-
-
-
-
-
-
-
-
-
 
 
 
