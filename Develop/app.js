@@ -14,7 +14,7 @@ const { type } = require("os");
 
 let mainArr = [];
 
-// Questions for Manager
+// This is a Questions for Manager
 const confirmManager = [{type: 'confirm', name: 'Manager',  message: 'Are you a manager?'
 }];
 const managersBio = [{   type: "input",   name: "managers_name",   message: "What is your name?" },
@@ -26,7 +26,7 @@ const managersBio = [{   type: "input",   name: "managers_name",   message: "Wha
     {type: "input", name: "managers_officeNumber", message: "What is your office phone number?"
     }
 ];
-// Questions for Engineer
+// This is a Questions for Engineer
 const engineerQuestions = [{type: "input",name: "engineers_name",message: "What is your engineer's name?"},
 
     {type: "input", name: "engineers_id", message: "What is your engineer's id?" },
@@ -35,7 +35,7 @@ const engineerQuestions = [{type: "input",name: "engineers_name",message: "What 
 
     { type: "input", name: "engineers_gitHub", message: "What is your engineer's GitHub username?" }
 ];
-// Questions for Intern
+// This is a Questions for Intern
 const internQuestions = [{type: "input",name: "interns_name",message: "What is your intern's name?"},
 
     {type: "input",name: "interns_id", message: "What is your intern's id?"},
@@ -45,7 +45,7 @@ const internQuestions = [{type: "input",name: "interns_name",message: "What is y
     {type: "input",name: "interns_school", message: "What is your intern's school?"
     }
 ];
-// choices list for if wants add more members
+// This is a choices list for if wants add more members
 const list = [{
     type: "list",
     name: "teamMember_type",
@@ -98,7 +98,7 @@ const promptIntern = () => {
     });
 };
 
-// Create function for HTML
+// This is a Create function for HTML
 const createHtml = () => {
     console.log('this is new html');
     console.log(render(mainArr));
