@@ -98,7 +98,7 @@ const promptIntern = () => {
     });
 };
 
-// Create HTML
+// Create function for HTML
 const createHtml = () => {
     console.log('this is new html');
     console.log(render(mainArr));
