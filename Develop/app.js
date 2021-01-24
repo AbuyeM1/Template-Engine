@@ -60,7 +60,7 @@ inquirer.prompt(confirmManager).then(ans => {
     promptMyManager();
     }
 });
-
+// This is the choice for the question to select
 const promptNext = () => {
     inquirer.prompt(list).then(data => {
     switch (data.teamMember_type) {
@@ -75,7 +75,7 @@ const promptNext = () => {
         }
     });
 };
-
+// This is inquirer for each 
 const promptManager = () => {
     inquirer.prompt(managersBio).then(ans => {
     console.log(ans);

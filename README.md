@@ -7,14 +7,14 @@
  - [CodeSnippets](#CodeSnippets)
  - [License](#license)
  - [Contributing](#contributing)
- - [BuiltWith](#builtith)
+ - [BuiltWith](#BuiltWith)
  - [Question](#Question)
 
 
 ## Description
  * This Application to generate a HTML page that displays the team's basic information.
 
-![alttext]()
+![alttext](https://lh3.googleusercontent.com/V6DQ53IcDalXFX5I3BHUcsHUNgdt2d1if4suEFgpBrszvQru8aq3-3fYrfZbsjxWXx3ZTQ=s500)
 
 
 ## Installation
@@ -38,7 +38,7 @@
         if(err) throw err;
     })
 
-## Builtwith
+## BuiltWith
  * This application built with
  * Javascript.
  * HTML
